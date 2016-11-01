@@ -1,2 +1,5 @@
 # Stocker
-We have used twitter data to  predict public mood in 6 different mood dimensions and use predicted mood and Dow Jones  Industrial Average (DJIA) values to predict stock market.
+we have implemented techniques mentioned in the research paper “Twitter mood predicts the stock market” by Prof. Johan Bollen. We have used twitter data to predict public mood in 6 different mood dimensions and use predicted mood and Dow Jones Industrial Average (DJIA) values to predict stock market. 
+After collecting twitter data and DJIA stock values data, we first performed sentiment analysis(considering slang and emojis) to compute scores of 6 Profile of mood states (POMS) mood dimensions. We then computed the negation of this 6 dimensions and perform combinations on this total 12 mood dimensions to produce new 286 combinations. 
+We then used Granger Causality analysis to find out mood dimension time series which best correlates with DJIA stock values for different lags of days. We found out that mood dimension [anger, confusion, tension] best correlates with DJIA stock values when lag was of 2 days.
+We then used linear regression model to predict stock values for two months training linear model on five previous months of data.
